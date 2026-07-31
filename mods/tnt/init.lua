@@ -686,7 +686,7 @@ function tnt.register_tnt(def)
 			on_ignite = function(pos, igniter)
                 if not minetest.is_protected(pos, igniter:get_player_name()) then
                     minetest.swap_node(pos, {name = name .. "_burning"})
-                   	minetest.registered_nodes[name .. "_burning"].on_construct(pos)
+                    minetest.registered_nodes[name .. "_burning"].on_construct(pos)
                 end
 			end,
 		})
