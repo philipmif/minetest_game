@@ -336,7 +336,7 @@ minetest.register_on_leaveplayer(function(player)
 	local name = player:get_player_name()
 	lay_down(player, nil, nil, false, true)
 	beds.player[name] = nil
-	minetest.after(0.1, function()
+	minetest.after(0, function()
         update_formspecs(false)
         if check_in_beds() then
             schedule_update()
